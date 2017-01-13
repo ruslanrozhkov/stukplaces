@@ -2,17 +2,18 @@
 #
 # Table name: places
 #
-#  id          :integer          not null, primary key
-#  name        :string
-#  address     :string
-#  description :text
-#  phone       :string
-#  website     :string
-#  user_id     :integer
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
-#  latitude    :float
-#  longitude   :float
+#  id                   :integer          not null, primary key
+#  name                 :string
+#  address              :string
+#  description          :text
+#  phone                :string
+#  website              :string
+#  user_id              :integer
+#  created_at           :datetime         not null
+#  updated_at           :datetime         not null
+#  latitude             :float
+#  longitude            :float
+#  total_average_rating :integer          default("0")
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
