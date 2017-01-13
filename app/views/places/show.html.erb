@@ -45,6 +45,15 @@
             map: map
         });
     }
+
+    <% @reviews.each do |review| %>
+    $(".score_<%= review.id %>").raty({
+        starOn: "<%= image_path 'star-on.png' %>",
+        starOff: "<%= image_path 'star-off.png' %>",
+        score: <%= review.score %>,
+        readOnly: true
+    });
+    <% end %>
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API'] %>&callback=initMap">
 </script>
