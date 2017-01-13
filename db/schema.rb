@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170113150123) do
+ActiveRecord::Schema.define(version: 20170113162902) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,10 +22,11 @@ ActiveRecord::Schema.define(version: 20170113150123) do
     t.string   "phone"
     t.string   "website"
     t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
     t.float    "latitude"
     t.float    "longitude"
+    t.integer  "total_average_rating", default: 0
   end
 
   create_table "reviews", force: :cascade do |t|
